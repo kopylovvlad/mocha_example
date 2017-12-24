@@ -1,0 +1,64 @@
+{
+  "name": "node-app-boilerplate",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "kopylov vladislav",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "lodash": "^4.17.4",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "start": "rimraf ./dist && babel -d ./dist ./src -s && node ./dist/main.js",
+    "dev": "node dev.js",
+    "test": "echo 'it will be later'",
+    "lint:js": "eslint ./src",
+    "list:flow": "echo 'it will be later'",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "pre-commit": "^1.2.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": false,
+      "node": true,
+      "es6": true
+    },
+    "extends": ["airbnb-base", "prettier"],
+    "rules": {
+      "semi": ["error", "never"]
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100,
+    "singleQuote": true
+  }
+}
