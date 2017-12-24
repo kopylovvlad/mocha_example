@@ -19,7 +19,7 @@ https://github.com/xanf/javascript.ninja-node-boilerplate
 
 ### TODO
 
-* add express (json CRUD)
+* add express (json CRUD/or write to file)
 * add flow (https://github.com/xanf/vscode-flow)
 * add tests
 * try to deploy to Heroku and ensure that it works
