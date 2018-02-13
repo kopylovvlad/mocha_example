@@ -15,33 +15,48 @@
   "scripts": {
     "start": "rimraf ./dist && babel -d ./dist ./src -s && node ./dist/main.js",
     "dev": "node dev.js",
-    "test": "echo 'it will be later'",
+    "test": "mocha",
     "lint:js": "eslint ./src",
+    "lint:js:fix": "eslint ./src --fix",
+    "lint:test": "eslint ./test",
+    "lint:test:fix": "eslint ./test --fix",
     "list:flow": "echo 'it will be later'",
+    "prettier:test": "prettier --write ./test/*",
+    "prettier:js": "prettier --write ./src/*",
     "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.js": "eslint"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
-    "pre-commit": "^1.2.2"
+    "mocha": "^5.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.10.2"
   },
   "eslintConfig": {
     "root": true,
     "env": {
       "browser": false,
       "node": true,
-      "es6": true
+      "es6": true,
+      "mocha": true
     },
-    "extends": ["airbnb-base", "prettier"],
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
     "rules": {
-      "semi": ["error", "never"]
+      "semi": [
+        "error",
+        "never"
+      ]
     }
   },
   "babel": {

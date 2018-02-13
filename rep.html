@@ -1,0 +1,29 @@
+yarn run v1.3.2
+$ /Users/vkopylov/Documents/royalsoftware/mocha_example/node_modules/.bin/mocha test/test.js -R doc
+    <section class="suite">
+      <h1>phoneNumber</h1>
+      <dl>
+        <section class="suite">
+          <h1>phoneNumber.validate()</h1>
+          <dl>
+            <dt>should be not null</dt>
+            <dd><pre><code>assert.isFalse(phoneNumber.validate(null))</code></pre></dd>
+            <dt>should be not indefined</dt>
+            <dd><pre><code>assert.isFalse(phoneNumber.validate(undefined))</code></pre></dd>
+            <dt>should be shorter than 9</dt>
+            <dd><pre><code>assert.isFalse(phoneNumber.validate(&#x27;123456789&#x27;))</code></pre></dd>
+            <dt>should be long than 7</dt>
+            <dd><pre><code>assert.isFalse(phoneNumber.validate(&#x27;1234567&#x27;))</code></pre></dd>
+            <dt>should contain only numbers</dt>
+            <dd><pre><code>assert.isFalse(phoneNumber.validate(&#x27;1234567a&#x27;))
+assert.isFalse(phoneNumber.validate(&#x27;abcdefgh&#x27;))
+assert.isFalse(phoneNumber.validate(&#x27;--------&#x27;))
+assert.isFalse(phoneNumber.validate(&#x27;        &#x27;))</code></pre></dd>
+            <dt>valid reference number examples</dt>
+            <dd><pre><code>assert.isTrue(phoneNumber.validate(&#x27;12345678&#x27;))
+assert.isTrue(phoneNumber.validate(&#x27;01234567&#x27;))</code></pre></dd>
+          </dl>
+        </section>
+      </dl>
+    </section>
+Done in 0.32s.
