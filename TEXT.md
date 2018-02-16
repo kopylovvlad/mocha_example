@@ -65,16 +65,14 @@ it('should respond with redirect on post', function(done) {
 });
 ```
 
-
 ### Plan
-* unit-testing phoneNumber.validate and lodash
+* unit-testing phoneNumber.validate and lodash (done)
 * vue-component testing
 * Hermione  => UI-testing
 * Hermione or supertest => Request testing (CRUD)
 
 
 ### Links
-* https://vimeo.com/14489233
 * https://mochajs.org/
 * http://chaijs.com/
 * https://github.com/visionmedia/supertest
