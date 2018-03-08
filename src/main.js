@@ -1,2 +1,1 @@
-require('./bar.js')
-require('./foo.js')
+require('./phone_number.js')
