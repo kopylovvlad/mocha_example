@@ -68,8 +68,6 @@ it('should respond with redirect on post', function(done) {
 ### Plan
 * unit-testing phoneNumber.validate and lodash (done)
 * vue-component testing
-* Hermione  => UI-testing
-* Hermione or supertest => Request testing (CRUD)
 
 
 ### Links
